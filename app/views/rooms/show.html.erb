@@ -11,11 +11,15 @@
   <input type="text" data-behavior="room_speaker">
 </form>
 
+<button id="sync">sync</button>
+
+
 <textarea name="editor1" id="editor1" rows="10" cols="80">
   This is my textarea to be replaced with CKEditor.
 </textarea>
 <script>
 var PAPER = {
+  count: 1,
   ck: null,
 
   init: function() {
@@ -28,3 +32,5 @@ $(function() {
   PAPER.init();
 });
 </script>
+
+<button id="add">add</button>
