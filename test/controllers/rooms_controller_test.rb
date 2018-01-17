@@ -1,9 +1,16 @@
 require 'test_helper'
 
 class RoomsControllerTest < ActionDispatch::IntegrationTest
+  # TODO: request spec is better
+
   test "should get show" do
     get rooms_show_url
     assert_response :success
+  end
+
+  test "should get messages" do
+    get rooms_show_url
+    assert_equal 2, assigns(:messages).length
   end
 
   test "should get index" do
